@@ -18,8 +18,12 @@ export class PruebaComponent implements OnInit {
     window.location.replace(url);
   }
   lunchMarket() {
-    const url = 'market://mibanco';
-    window.location.replace(url);
+    if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
+      window.location.href = 'https://play.google.com/store/apps/details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US';
+    }
+    if (navigator.userAgent.toLowerCase().indexOf("iphone") > -1) {
+      window.location.href = 'https://apps.apple.com/cl/app/mi-banco-chile/id1516872542';
+    }
 
   }
 
