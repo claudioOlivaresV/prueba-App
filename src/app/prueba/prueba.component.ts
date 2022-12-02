@@ -16,6 +16,11 @@ export class PruebaComponent implements OnInit {
   launchAppOnAppleDevice() {
     const url = "mibanco://";
     window.location.replace(url);
- }
+  }
+  lunchMarket() {
+    const url = 'market://mibanco';
+    window.location.replace(url);
+
+  }
 
 }
