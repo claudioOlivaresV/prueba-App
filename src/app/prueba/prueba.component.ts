@@ -24,7 +24,7 @@ export class PruebaComponent implements OnInit {
     if (navigator.userAgent.toLowerCase().indexOf("iphone") > -1) {
       window.location.href = 'https://apps.apple.com/cl/app/mi-banco-chile/id1516872542';
     }
-    if(navigator.userAgent.toLowerCase().indexOf("iPad") > -1 ) {
+    if(navigator.userAgent.toLowerCase().indexOf("ipad") > -1 ) {
       window.location.href = 'https://apps.apple.com/cl/app/mi-banco-chile/id1516872542';
     }
     if(navigator.userAgent.toLowerCase().indexOf("huawei") > -1 ) {
