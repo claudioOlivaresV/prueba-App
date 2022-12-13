@@ -11,7 +11,6 @@ export class PruebaComponent implements OnInit {
 
   ngOnInit(): void {
     this.launchAppOnAppleDevice();
-    window.location.href = 'https:www.google.cl';
   }
 
   launchAppOnAppleDevice() {
