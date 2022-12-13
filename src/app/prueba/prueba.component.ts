@@ -25,7 +25,7 @@ export class PruebaComponent implements OnInit {
       window.location.href = 'https://apps.apple.com/cl/app/mi-banco-chile/id1516872542';
     }
     if(navigator.userAgent.toLowerCase().indexOf("ipad") > -1 ) {
-      window.location.href = 'https://apps.apple.com/cl/app/mi-banco-chile/id1516872542';
+      location.assign('https://apps.apple.com/cl/app/mi-banco-chile/id1516872542');
     }
     if(navigator.userAgent.toLowerCase().indexOf("huawei") > -1 ) {
       window.location.href = 'https://appgallery.huawei.com/app/C106022449?sharePrepath=ag';
