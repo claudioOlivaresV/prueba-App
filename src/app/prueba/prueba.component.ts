@@ -11,6 +11,7 @@ export class PruebaComponent implements OnInit {
 
   ngOnInit(): void {
     this.launchAppOnAppleDevice();
+    alert(navigator.userAgent)
   }
 
   launchAppOnAppleDevice() {
