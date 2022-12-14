@@ -16,6 +16,10 @@ export class PruebaComponent implements OnInit {
   launchAppOnAppleDevice() {
     const url = "mibanco://";
     window.location.replace(url);
+    if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
+      console.log('es un dispositivo');
+      
+    }
   }
   lunchMarket() {
     if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
@@ -32,6 +36,9 @@ export class PruebaComponent implements OnInit {
     }
     
 
+  }
+  lunchAppGallery() {
+    window.location.href = 'https://appgallery.huawei.com/app/C106022449?sharePrepath=ag';
   }
 
 }
