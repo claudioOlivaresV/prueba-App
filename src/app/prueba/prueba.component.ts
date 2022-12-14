@@ -11,37 +11,30 @@ export class PruebaComponent implements OnInit {
 
   ngOnInit(): void {
     this.launchAppOnAppleDevice();
-    alert(navigator.userAgent)
   }
 
   launchAppOnAppleDevice() {
     const url = "mibanco://";
-    window.location.replace(url);
-    if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
-      console.log('es un dispositivo');
-      
-    }
-   
-
+    const resp =  window.location.replace(url);
+    console.log(resp);   
   }
   lunchMarket() {
     if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
-      window.location.href = 'https://play.google.com/store/apps/details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US';
+      const resp = window.location.href = 'https://play.google.com/store/apps/details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US';
+      console.log(resp);
+      
+      if(!resp) {
+        window.location.href = 'https://appgallery.huawei.com/app/C106022449?sharePrepath=ag';
+      }
     }
     if (navigator.userAgent.toLowerCase().indexOf("iphone") > -1) {
       window.location.href = 'https://apps.apple.com/cl/app/mi-banco-chile/id1516872542';
     }
     if(navigator.userAgent.match(/iPad|iPod/i) || navigator.userAgent.includes("Mac") && "ontouchend" in document) {
-      window.location.href = 'https://apps.apple.com/cl/app/mi-banco-chile/id1516872542';
+      window.location.href = 'https://apps.apple.com/cl/app/mi-banco-chile/id1516872542';      
     }
-    if(navigator.userAgent.toLowerCase().indexOf("huawei") > -1 ) {
+    if(navigator.userAgent.toLowerCase().indexOf("harmonyos") > -1 ) {
       window.location.href = 'https://appgallery.huawei.com/app/C106022449?sharePrepath=ag';
     }
-    
-
   }
-  lunchAppGallery() {
-    window.location.href = 'https://appgallery.huawei.com/app/C106022449?sharePrepath=ag';
-  }
-
 }
