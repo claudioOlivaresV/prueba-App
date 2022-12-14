@@ -14,7 +14,7 @@ export class PruebaComponent implements OnInit {
   }
 
   launchAppOnAppleDevice() {
-    const url = "bancochilebanconexion://";
+    const url = "banconexion://";
     const resp =  window.location.replace(url);
     console.log(resp);   
   }
