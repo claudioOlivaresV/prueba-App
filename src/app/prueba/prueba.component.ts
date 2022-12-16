@@ -14,14 +14,14 @@ export class PruebaComponent implements OnInit {
   }
 
   launchAppOnAppleDevice() {
-    const url = "mibcx://";
+    const url = "bancochilebanconexion://";
     const resp =  window.location.replace(url);
     console.log(resp);   
   }
   lunchMarket() {
     if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
       const resp = window.location.href = 'https://play.google.com/store/apps/details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US';
-      console.log(resp);
+      console.log();
       
       if(!resp) {
         window.location.href = 'https://appgallery.huawei.com/app/C106022449?sharePrepath=ag';
