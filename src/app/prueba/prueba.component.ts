@@ -20,12 +20,10 @@ export class PruebaComponent implements OnInit {
   }
   lunchMarket() {
     if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
-      const resp = window.location.href = 'https://play.google.com/store/apps/details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US';
-      console.log();
-      
-      if(!resp) {
-        window.location.href = 'https://appgallery.huawei.com/app/C106022449?sharePrepath=ag';
-      }
+      window.location.href = 'market://details?id=id=cl.bancochile.mi_banco&hl=es_CL&gl=US';
+      setTimeout(() => {
+        window.location.href = 'https://appgallery.huawei.com/app/C106022449?sharePrepath=ag';        
+      }, 30);
     }
     if (navigator.userAgent.toLowerCase().indexOf("iphone") > -1) {
       window.location.href = 'https://apps.apple.com/cl/app/mi-banco-chile/id1516872542';
