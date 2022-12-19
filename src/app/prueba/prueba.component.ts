@@ -26,13 +26,18 @@ export class PruebaComponent implements OnInit {
   lunchMarket() {
     if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
       const url = "market://details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US";
-      let respo = window.location.href = url;
+      let respo = window.navigator.(url, '_self');
       console.log(respo);
-      // if(respo === 'undefined') {
-      //   setTimeout(() => {
-      //     window.location.href = 'https://appgallery.huawei.com/app/C106022449?sharePrepath=ag';        
-      //   }, 30);
-      // }
+      if(respo?.document.URL === 'about:blank') {
+        console.log('no ablre');
+        // if(respo === 'undefined') {
+          setTimeout(() => {
+            window.location.href = 'https://appgallery.huawei.com/app/C106022449?sharePrepath=ag';        
+          }, 30);
+        // }
+        
+
+      }
       
     }
     if (navigator.userAgent.toLowerCase().indexOf("iphone") > -1) {
