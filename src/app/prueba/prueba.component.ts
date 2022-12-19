@@ -26,7 +26,7 @@ export class PruebaComponent implements OnInit {
   lunchMarket() {
     if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
       const url = "market://details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US";
-      let respo = window.navigator.(url, '_self');
+      let respo = window.open(url);
       console.log(respo);
       if(respo?.document.URL === 'about:blank') {
         console.log('no ablre');
