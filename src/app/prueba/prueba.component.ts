@@ -40,7 +40,7 @@ export class PruebaComponent implements OnInit {
       // this.openAndroid();
       // const url = "market://details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US";
       // window.location.href = url;
-      const urlHuawei = 'appmarket://details?id=C104725277'
+      const urlHuawei = 'appmarket://C104725277'
       window.location.href = urlHuawei;
       // this.openAndroid().then(() => {
       //   console.log('ok');
@@ -82,7 +82,7 @@ export class PruebaComponent implements OnInit {
       window.location.href = 'https://apps.apple.com/cl/app/mi-banco-chile/id1516872542';
     }
     if (navigator.userAgent.toLowerCase().indexOf("harmonyos") > -1) {
-      window.location.href = 'https://appgallery.huawei.com/app/C106022449?sharePrepath=ag';
+      window.location.href = 'https://appgallery.huawei.com/app/C104725277';
     }
   }
 }
