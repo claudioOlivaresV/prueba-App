@@ -29,8 +29,8 @@ export class PruebaComponent implements OnInit {
   lunchMarket() {
     if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
       // this.openAndroid();
-      // const url = "market://details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US";
-      // window.location.href = url;
+      const url = "market://details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US";
+      window.location.href = url;
       const urlHuawei = 'hiapplink://com.huawei.appmarket?appId=C104725277&channelId=123412'
       window.location.href = urlHuawei;
       // this.openAndroid().then(() => {
