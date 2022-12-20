@@ -25,22 +25,13 @@ export class PruebaComponent implements OnInit {
     let respo = await fetch(window.location.href = url);
     return respo
   }
-  openAndroid() {
-    // const url = "market://details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US";
-    // window.location.href = url;
-    const urlHuawei = 'market://details?id=C106022449?sharePrepath=ag'
-    window.location.href = urlHuawei;
 
-
-
-
-  }
   lunchMarket() {
     if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
       // this.openAndroid();
       // const url = "market://details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US";
       // window.location.href = url;
-      const urlHuawei = 'appmarket://C104725277'
+      const urlHuawei = 'appmarket://com.huawei.appmarket?appId=C104725277'
       window.location.href = urlHuawei;
       // this.openAndroid().then(() => {
       //   console.log('ok');
