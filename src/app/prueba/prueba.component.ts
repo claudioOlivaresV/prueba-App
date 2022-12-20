@@ -33,9 +33,13 @@ export class PruebaComponent implements OnInit {
     if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
       
       const url = "market://details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US";
-      const test =  fetch( window.location.href = url );
+      fetch( window.location.href = url ).then(()=>{
+        console.log('ok');
+        
+      }).catch(()=> {console.log('error');
+      });
 
-      console.log(test);
+      // console.log(test);
       
       // let respo = window.open(url);
       // console.log(respo);
