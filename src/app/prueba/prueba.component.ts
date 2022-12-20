@@ -10,14 +10,10 @@ export class PruebaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // const resp = this.launchAppOnAppleDevice();
-    // console.log(resp);
-    this.launchAppOnAppleDevice().then((rest)=> {
-      console.log(rest); 
-    }, (err) => {
-      console.log(err);
-      
-    })
+    const resp = this.launchAppOnAppleDevice().catch(()=>{
+      console.log('aqui')
+    });
+    console.log(resp);
     
     
     
@@ -29,15 +25,28 @@ export class PruebaComponent implements OnInit {
     let respo = await fetch( window.location.href = url );
     return respo
   }
+  async openAndroid() {
+    const url = "market://details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US";
+    let respo = await fetch( window.location.href = url );
+    return respo
+  }
   lunchMarket() {
     if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
-      
-      const url = "market://details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US";
-      fetch( window.location.href = url ).then(()=>{
+      this.openAndroid().then(() => {
         console.log('ok');
         
-      }).catch(()=> {console.log('error');
-      });
+      }).catch(()=> {
+        console.log('error');
+        
+      })
+      
+      // const url = "market://details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US";
+      // const test = window.open = function() { 
+      //   if(url) { 
+      //     location.href = url; 
+      //   } 
+      //   return window; 
+      // } 
 
       // console.log(test);
       
