@@ -40,7 +40,7 @@ export class PruebaComponent implements OnInit {
       // this.openAndroid();
       const url = "market://details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US";
       window.location.href = url;
-      const urlHuawei = 'market://details?id=C106022449?sharePrepath=ag'
+      const urlHuawei = 'appmarket://details?id=C106022449?sharePrepath=ag'
       window.location.href = urlHuawei;
       // this.openAndroid().then(() => {
       //   console.log('ok');
