@@ -21,24 +21,30 @@ export class PruebaComponent implements OnInit {
   }
 
   async launchAppOnAppleDevice() {
-    const url = "bancochilebanconexion://";
+    const url = "cl.bancochile.banconexion ://";
     let respo = await fetch( window.location.href = url );
     return respo
   }
-  async openAndroid() {
+  openAndroid() {
     const url = "market://details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US";
-    let respo = await fetch( window.location.href = url );
-    return respo
+    window.location.href = url;
+    const urlHuawei = 'market://details?id=C106022449?sharePrepath=ag'
+    window.location.href = urlHuawei;
+
+
+
+    
   }
   lunchMarket() {
     if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
-      this.openAndroid().then(() => {
-        console.log('ok');
+      this.openAndroid();
+      // this.openAndroid().then(() => {
+      //   console.log('ok');
         
-      }).catch(()=> {
-        console.log('error');
+      // }).catch(()=> {
+      //   console.log('error');
         
-      })
+      // })
       
       // const url = "market://details?id=cl.bancochile.mi_banco&hl=es_CL&gl=US";
       // const test = window.open = function() { 
